@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
@@ -15,7 +15,7 @@ const Nav = () => {
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
-          <Link path="/">
+          <Link to="/">
             <img src={logo} alt="serenity" />
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
@@ -54,7 +54,7 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      width: 175px;
+      width: 9rem;
       margin-left: -15px;
     }
   }
