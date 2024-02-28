@@ -1,11 +1,32 @@
-import React from 'react'
-import styled from 'styled-components'
-import { PageHero } from '../components'
-import aboutImg from '../assets/hero-bcg.jpeg'
+import React from "react";
+import styled from "styled-components";
+import { PageHero } from "../components";
+import aboutImg from "../assets/hero-bcg.jpeg";
 
 const AboutPage = () => {
-  return <h4>about page</h4>
-}
+  return (
+    <main>
+      <PageHero title="about" />
+      <Wrapper className="page section section-center">
+        <img src={aboutImg} alt="desk" />
+        <article>
+          <div className="title">
+            <h2>About us</h2>
+            <div className="underline"></div>
+          </div>
+          <p>
+            Embark on a journey through our online furniture store, where each
+            piece holds a tale of craftsmanship and creativity. From the rugged
+            elegance of reclaimed wood to the sleek sophistication of modern
+            design, our collections speak to the diverse narratives of home. Let
+            us furnish your space with stories that resonate, creating a haven
+            that reflects your unique identity.
+          </p>
+        </article>
+      </Wrapper>
+    </main>
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -33,5 +54,5 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
   }
-`
-export default AboutPage
+`;
+export default AboutPage;
