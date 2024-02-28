@@ -12,11 +12,16 @@ const Contact = () => {
             Reprehenderit eligendi architecto, vel at distinctio officiis cum
             veritatis illo doloribus! Libero!
           </p>
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/xvoerwvw"
+            method="POST"
+          >
             <input
               type="email"
               className="form-input"
               placeholder="enter email"
+              name="_replyto"
             />
             <button type="button" className="submit-btn">
               Subscribe
