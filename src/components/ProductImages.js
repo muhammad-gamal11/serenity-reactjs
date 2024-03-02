@@ -17,6 +17,7 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
               key={index}
               // ========| when i click on any image , it becomes the main one |========
               onClick={() => setMain(images[index])}
+              className={`${image.url === main.url && "active"} `}
             />
           );
         })}
