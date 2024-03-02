@@ -69,13 +69,14 @@ export const ProductsProvider = ({ children }) => {
         ...state,
         openSidebar,
         closeSidebar,
+        fetchSingleProduct,
       }}
     >
       {children}
     </ProductsContext.Provider>
   );
 };
-// make sure use
+//============| custom hook |============
 export const useProductsContext = () => {
   return useContext(ProductsContext);
 };
