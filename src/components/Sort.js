@@ -1,10 +1,31 @@
-import React from 'react'
-import { useFilterContext } from '../context/filter_context'
-import { BsFillGridFill, BsList } from 'react-icons/bs'
-import styled from 'styled-components'
+import React from "react";
+import { useFilterContext } from "../context/filter_context";
+import { BsFillGridFill, BsList } from "react-icons/bs";
+import styled from "styled-components";
 const Sort = () => {
-  return <h4>sort </h4>
-}
+  const { filtered_products: products, grid_view } = useFilterContext();
+  return (
+    <Wrapper>
+      <div className="btn-container">
+        <button type="button" className={`${grid_view && "active"}`}>
+          <BsFillGridFill />
+        </button>
+        <button type="button" className={`${!grid_view && "active"}`}>
+          <BsList />
+        </button>
+      </div>
+      <p>{products.length} products found</p>
+      <hr />
+      <label htmlFor="sort">sort by </label>
+      <select name="sort" id="sort" className="sort-input">
+        <option value="price-lowest">price (lowest)</option>
+        <option value="price-highest">price (highest)</option>
+        <option value="price-a">name (a-z)</option>
+        <option value="price-z">name (z-a)</option>
+      </select>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -62,11 +83,12 @@ const Wrapper = styled.section`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
+    outline: none;
   }
   label {
     font-size: 1rem;
     text-transform: capitalize;
   }
-`
+`;
 
-export default Sort
+export default Sort;
