@@ -12,19 +12,27 @@ import {
 const filter_reducer = (state, action) => {
   if (action.type === LOAD_PRODUCTS) {
     // =========| to be able to go back to the default once i remove the filter |=========
+    let maxPrice = action.payload.map((p) => p.price);
+    maxPrice = Math.max(...maxPrice);
+    // console.log(maxPrice);
     return {
       ...state,
       all_products: [...action.payload],
       filtered_products: [...action.payload],
+      filters: { ...state.filters, max_price: maxPrice, price: maxPrice },
     };
-  } else if (action.type === SET_GRIDVIEW) {
+  }
+  if (action.type === SET_GRIDVIEW) {
     return { ...state, grid_view: true };
-  } else if (action.type === SET_LISTVIEW) {
+  }
+  if (action.type === SET_LISTVIEW) {
     return { ...state, grid_view: false };
-  } else if (action.type === UPDATE_SORT) {
+  }
+  if (action.type === UPDATE_SORT) {
     // console.log(action.payload);
     return { ...state, sort: action.payload };
-  } else if (action.type === SORT_PRODUCTS) {
+  }
+  if (action.type === SORT_PRODUCTS) {
     const { sort, filtered_products } = state;
     let tempProducts = [...filtered_products];
     if (sort === "price-lowest") {
@@ -36,8 +44,15 @@ const filter_reducer = (state, action) => {
     } else if (sort === "name-z") {
       tempProducts = tempProducts.sort((a, b) => b.name.localeCompare(a.name));
     }
-
     return { ...state, filtered_products: tempProducts };
+  }
+  if (action.type === UPDATE_FILTERS) {
+    const { name, value } = action.payload;
+    return { ...state, filters: { ...state.filters, [name]: value } };
+  }
+  if (action.type === FILTER_PRODUCTS) {
+    // console.log("filter");
+    return { ...state };
   }
   throw new Error(`No Matching "${action.type}" - action type`);
 };
