@@ -12,10 +12,11 @@ const Services = () => {
             built only for you
           </h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
-            mollitia quis esse voluptate pariatur corporis earum ipsam
-            exercitationem libero at odit in maxime ad quibusdam, excepturi
-            incidunt voluptatem. Perferendis, quaerat!
+            We pride ourselves on crafting bespoke pieces tailored exclusively
+            to your vision and needs. Each creation is meticulously designed and
+            expertly crafted, ensuring exceptional quality and unmatched
+            craftsmanship. Experience the joy of owning furniture that reflects
+            your unique style and personality.
           </p>
         </article>
         <div className="services-center">

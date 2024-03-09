@@ -5,12 +5,12 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <h3>Join our newsLetter and get 20% off</h3>
+        <h3>Join our news letter and get 20% off</h3>
         <div className="content">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit eligendi architecto, vel at distinctio officiis cum
-            veritatis illo doloribus! Libero!
+            Stay in the loop with Serenity's newsletter! Be the first to know
+            about exclusive deals, new arrivals, and design tips to elevate your
+            space.
           </p>
           <form
             className="contact-form"

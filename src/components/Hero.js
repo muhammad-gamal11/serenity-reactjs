@@ -8,13 +8,15 @@ const Hero = () => {
   return (
     <Wrapper className="section-center">
       <article className="content">
-        <h1>
-          design your <br /> comfort zone
-        </h1>
+        <h2>
+          Serenity , <br /> your Destination for Stylish Home Furniture
+        </h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-          vel magnam molestiae iure qui? Fugit quas similique iusto voluptate
-          est?
+          Discover a world of elegance and comfort at Serenity. From timeless
+          classics to modern marvels, our curated collection offers furniture
+          pieces that elevate every corner of your home. Find quality
+          craftsmanship and exquisite designs tailored to your style, making
+          your living space truly remarkable
         </p>
         <Link to="/products" className="btn hero-btn">
           shop now
