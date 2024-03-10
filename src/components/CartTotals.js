@@ -1,13 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
-import { formatPrice } from '../utils/helpers'
-import { Link } from 'react-router-dom'
+import React from "react";
+import styled from "styled-components";
+import { useCartContext } from "../context/cart_context";
+import { useUserContext } from "../context/user_context";
+import { formatPrice } from "../utils/helpers";
+import { Link } from "react-router-dom";
 
 const CartTotals = () => {
-  return <h4>cart totals</h4>
-}
+  const { total_amount, shipping_fee } = useCartContext();
+  return (
+    <Wrapper>
+      <div>
+        <article>
+          <h5>
+            subtotal : <span>$ {total_amount / 100}</span>
+          </h5>
+          <p>
+            shipping : <span>$ {shipping_fee / 100}</span>
+          </p>
+          <hr />
+          <h4>
+            order total : <span>$ {(total_amount + shipping_fee) / 100}</span>
+          </h4>
+        </article>
+        <Link to="/checkout" className="btn">
+          proceed to checkout
+        </Link>
+      </div>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -39,6 +60,6 @@ const Wrapper = styled.section`
     text-align: center;
     font-weight: 700;
   }
-`
+`;
 
-export default CartTotals
+export default CartTotals;
