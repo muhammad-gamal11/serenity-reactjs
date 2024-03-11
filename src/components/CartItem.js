@@ -5,8 +5,12 @@ import { useCartContext } from "../context/cart_context";
 
 const CartItem = ({ id, image, name, color, price, amount }) => {
   const { removeItem, toggleAmount } = useCartContext();
-  const increase = () => {};
-  const decrease = () => {};
+  const increase = () => {
+    toggleAmount(id, "increase");
+  };
+  const decrease = () => {
+    toggleAmount(id, "decrease");
+  };
   return (
     <Wrapper>
       <div className="title">
@@ -21,7 +25,7 @@ const CartItem = ({ id, image, name, color, price, amount }) => {
       </div>
       <h5 className="price">$ {price / 100}</h5>
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-      <h5 className="subtotal">$ {(price / 100) * amount}</h5>
+      <h5 className="subtotal">$ {((price / 100) * amount).toFixed(2)}</h5>
       <button
         type="button"
         className="remove-btn"
