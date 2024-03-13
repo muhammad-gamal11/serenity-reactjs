@@ -21,7 +21,7 @@ const CheckoutForm = () => {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState("");
-  const [disabled, setDisabled] = useState(true);
+  const [disabled, setDisabled] = useState(false);
   const [clientSecret, setClientSecret] = useState("");
   const stripe = useStripe();
   const elements = useElements();
@@ -123,9 +123,8 @@ const CheckoutForm = () => {
         <p className={succeeded ? "result-message" : "result-message hidden"}>
           Payment succeeded, see the result in your
           <a href={`https://dashboard.stripe.com/test/payments`}>
-            {" "}
             Stripe dashboard.
-          </a>{" "}
+          </a>
           Refresh the page to pay again.
         </p>
       </form>

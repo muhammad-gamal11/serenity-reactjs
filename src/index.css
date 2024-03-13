@@ -5,26 +5,22 @@ Variables
 */
 
 :root {
-  /* Darker shades of navy */
-  --clr-primary-1: hsl(210, 100%, 20%);
-  --clr-primary-2: hsl(210, 100%, 30%);
-  --clr-primary-3: hsl(210, 100%, 40%);
-  --clr-primary-4: hsl(210, 100%, 50%);
-  --clr-primary-5: hsl(210, 100%, 60%);
-
-  /* Lighter shades of navy */
-  --clr-primary-6: hsl(210, 100%, 70%);
-  --clr-primary-7: hsl(210, 100%, 80%);
-  --clr-primary-8: hsl(210, 100%, 90%);
-  --clr-primary-9: hsl(210, 100%, 95%);
-  --clr-primary-10: hsl(210, 100%, 98%);
+  --clr-primary-1: hsl(240, 100%, 20%);
+  --clr-primary-2: hsl(240, 100%, 30%);
+  --clr-primary-3: hsl(240, 100%, 40%);
+  --clr-primary-4: hsl(240, 100%, 50%);
+  --clr-primary-5: hsl(240, 100%, 60%);
+  --clr-primary-6: hsl(240, 100%, 70%);
+  --clr-primary-7: hsl(240, 100%, 80%);
+  --clr-primary-8: hsl(240, 100%, 90%);
+  --clr-primary-9: hsl(240, 100%, 95%);
+  --clr-primary-10: hsl(240, 100%, 98%);
 
   /* darkest grey - used for headings */
   --clr-grey-1: #102a42;
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
@@ -60,8 +56,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Supreme", sans-serif;
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -82,11 +77,17 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: "Bespoke Stencil", sans-serif;
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
+
+button {
+  font-family: inherit;
+}
+
 h1 {
   font-size: 2.5rem;
 }

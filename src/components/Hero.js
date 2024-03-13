@@ -9,14 +9,15 @@ const Hero = () => {
     <Wrapper className="section-center">
       <article className="content">
         <h2>
-          Serenity , <br /> your Destination for Stylish Home Furniture
+          <span>Digital Dynamo</span> , <br /> Elevating Electronics, Empowering
+          You
         </h2>
         <p>
-          Discover a world of elegance and comfort at Serenity. From timeless
-          classics to modern marvels, our curated collection offers furniture
-          pieces that elevate every corner of your home. Find quality
-          craftsmanship and exquisite designs tailored to your style, making
-          your living space truly remarkable
+          Digital Dynamo brings you the latest in electronics, from smartphones
+          to smart home devices. Discover innovative gadgets that enhance your
+          lifestyle. With our curated selection and expert advice, stay ahead in
+          the digital age. Explore, shop, and elevate your tech experience with
+          us.
         </p>
         <Link to="/products" className="btn hero-btn">
           shop now
@@ -34,6 +35,10 @@ const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
   place-items: center;
+
+  article h2 span {
+    color: var(--clr-primary-6);
+  }
   .img-container {
     display: none;
   }
